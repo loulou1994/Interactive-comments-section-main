@@ -1,0 +1,33 @@
+@use "pseudoClass-root" as *;
+
+.blue-mod{ color: var(--blue-mod);}
+
+.red-sof{ color: var(--red-sof);}
+
+.blue-ligh{ color: var(--blue-ligh);}
+
+.red-pale{ color: var(--red-pale);}
+
+.blue-dark{ color: var(--blue-dark);}
+
+.blue-grayish{ color: var(--blue-grayish);}
+
+.ligh-gray{ color: var(--ligh-gray);}
+
+.str-lt-gray{ color: var(--str-lt-gray);}
+
+.bg-blue-mod{ background-color: var(--blue-mod);}
+
+.bg-red-sof{ background-color: var(--red-sof);}
+
+.bg-blue-ligh{ background-color: var(--blue-ligh);}
+
+.bg-red-pale{ background-color: var(--red-pale);}
+
+.bg-blue-dark{ background-color: var(--blue-dark);}
+
+.bg-blue-grayish{ background-color: var(--blue-grayish);}
+
+.bg-ligh-gray{ background-color: var(--ligh-gray);}
+
+.bg-str-lt-gray{ background-color: var(--str-lt-gray);}

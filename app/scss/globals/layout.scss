@@ -1,0 +1,100 @@
+@use '../util' as *;
+
+.container {
+	max-width: rem(730);
+	margin-top: rem(32);
+	margin-inline: auto;
+
+	@include breakpoint-down(medium){
+		width: 95%;
+	}
+}
+
+.flex{
+	display: flex;
+	gap: var(--gap, 1rem);
+}
+
+.grid{
+	display: grid;
+	gap: var(--gap, 1rem);
+}
+
+.nested-inputBox{
+	grid-template-columns: max-content 1fr;
+}
+
+.flow > * + *{
+	margin-top: 1.5rem;
+}
+
+.pd-full{
+	padding: rem(15);
+
+	@include breakpoint(medium){
+		padding: rem(24);
+	}
+}
+
+main{
+	flex-direction: column;
+}
+
+.custom-btn{
+	--gap: 10px;
+	align-items: center;
+	padding: 5px;
+}
+
+.send-update-btn{
+	grid-area: submit-btn;
+    justify-self: end;
+	padding: .6rem 1rem;
+	border: 0;
+	border-radius: .5rem;
+	color: #fff;
+	background-color: #5357b6;
+}
+
+.edit-text-box{
+	border: 1px solid #c7c7c7;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: 0;
+    padding: 1rem;
+	overflow: hidden;
+    resize: none;
+}
+
+.overlay {
+	display: none;
+    position: fixed;
+    inset: 0;
+    background: hsl(var(--black) / .6);
+	z-index: 99;
+	
+	&.open{
+		display: block;
+	}
+
+	.delete-box {
+		--gap: 1.1rem;
+		flex-direction: column;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: clamp(21.4375rem, 3.5vw + 21.4375rem, 25rem);
+		padding: 1.5rem;
+		border-radius: 0.6rem;
+		background: var(--clr-white);
+		transform: translate(-50%, -50%);
+	}
+
+	button{
+		flex: 1;
+		padding-block: .8rem;
+		border-radius: .6rem;
+		color: var(--clr-white);
+	}
+}
+

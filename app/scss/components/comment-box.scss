@@ -1,0 +1,110 @@
+@use '../util' as *;
+@use '../globals/' as *;
+
+.separation-bar{
+    border-left: rem(3) solid var(--ligh-gray);
+    margin-bottom: rem(-24);
+    transform: translateY(rem(-11));
+
+    @include breakpoint(medium){
+        margin-left: 1rem;
+    }
+}
+
+.card{
+    border-radius: rem(10);
+    background-color: var(--clr-white);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        'username username username'
+        'comment comment comment'
+        'score . user-action';
+    align-items: center;
+    background-color: var(--clr-white);
+
+    @include breakpoint(medium){
+        grid-template-columns: max-content 1fr max-content;
+        grid-template-areas:
+        "score username user-action"
+        "score comment comment";
+        --gap: 1rem 1.5rem;
+    }
+
+    &--edit{
+        grid-template-areas: "username username username"
+						"comment comment comment"
+						"score . user-action"
+						". . submit-btn";
+
+        @include breakpoint(medium){
+            grid-template-areas: "score username user-action"
+							"score comment comment"
+							". . submit-btn";
+        }
+    }
+
+    &__user{
+        grid-area: username;
+        align-items: center;
+        --gap: 0.6rem;
+        font-size: var(--fs-100);
+
+        @include breakpoint(medium){
+            --gap: 1rem;
+            font-size: var(--fs-300);
+        }
+
+        & img{
+            width: clamp(33px, 33px + 2vw, 75px);
+        }
+
+        & .user-reply{
+            margin-left: rem(4);
+            padding: rem(4) rem(8);
+            font-size: rem(12);
+            color: var(--clr-white);
+            font-weight: 400;
+            border-radius: rem(4);
+            background: var(--blue-mod);
+        }
+    }
+
+    &__comment{
+        grid-area: comment;
+        // grid-column: 1 / span 2;
+
+        .respondedUser{
+            font-weight: 600;
+            color: var(--blue-mod);
+        }
+    }
+
+    &__comment-score{
+        grid-area: score;
+        --gap: 0;
+        align-items: center;
+        justify-content: space-evenly;
+        width: rem(90);
+        padding-block: rem(8);
+        border: 0;
+        border-radius: rem(10);
+
+        @include breakpoint(medium){
+            align-self: flex-start;
+            flex-direction: column;
+            --gap: 0.9375rem;
+            width: auto;
+            padding: rem(12) rem(10);
+        }
+
+        & > .vote-button{
+            flex-basis: 16%;
+            cursor: pointer;
+        }
+    }
+
+    &__user-btns{
+        grid-area: user-action;
+        justify-self: end;
+    }
+}

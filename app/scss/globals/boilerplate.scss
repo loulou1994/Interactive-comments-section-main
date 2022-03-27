@@ -1,0 +1,63 @@
+@use "pseudoClass-root";
+
+// ---------reset--------
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	font-family: var(--ff-rubik-sans);
+	font-size: var(--fs-300);
+	color: var(--blue-grayish);
+	line-height: 1.5;
+	background-color: var(--str-lt-gray);
+}
+
+a, a:visited{
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3{
+	line-height: 1.1;
+}
+
+img,
+picture{
+	display: block;
+}
+
+input,
+button,
+textarea,
+select{
+	padding: 0;
+	border: 0;
+	font: inherit;
+	background-color: transparent;
+}
+
+button:hover{
+	cursor: pointer;
+}

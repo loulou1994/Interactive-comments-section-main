@@ -1,0 +1,32 @@
+@use '../util/' as *;
+.card{
+    &.card--user{
+        grid-template-areas: "comment-area comment-area comment-area"
+            "profile-image . submit-btn";
+
+        @include breakpoint(medium){
+            align-items: start;
+            grid-template-areas: "profile-image  comment-area submit-btn";
+        }
+    }
+
+    &__label-image{
+        grid-area: profile-image;
+        position: relative;
+
+        & img{
+            width: clamp(33px, 33px + 2vw, 75px);
+        }
+
+        & span{
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+
+    &__comment-input{
+        grid-area: comment-area;
+    }
+}
