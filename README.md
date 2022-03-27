@@ -7,7 +7,7 @@ This is a solution to the [Interactive comments section challenge on Frontend Me
 - Navigate to the project folder through the command line.
 - Run npm install to download the required dependencies
 - Run gulp
-- A local Live server should load and a dist folder is created.
+- A local Live server should load and generate the index.html.
 
 ## Table of contents
 
