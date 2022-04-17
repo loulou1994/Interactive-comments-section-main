@@ -7,7 +7,6 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.14.8",
-    "@babel/preset-env": "^7.14.8",
     "autoprefixer": "^10.2.6",
     "browser-sync": "^2.27.4",
     "cssnano": "^5.0.6",
@@ -23,5 +22,8 @@
     "last 1 version",
     "IE 11",
     "> 1%"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11"
+  }
 }

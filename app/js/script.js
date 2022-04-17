@@ -294,6 +294,7 @@ function deleteComment(){
 
   if (trueOrFalse === "true"){
     saveScorContent(rmElement);
+    --createdAtId;
     removeElement.remove();
     scoreList.splice(rmScore, 1);
   }
